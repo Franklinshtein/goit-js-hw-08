@@ -22,6 +22,11 @@ const updateFeedbackData = event => {
 const onFormSubmitting = event => {
   event.preventDefault();
 
+  if (feedbackData.email === undefined || feedbackData.message === undefined) {
+    alert('Будь ласка, заповніть всі поля');
+    return;
+  }
+
   console.log('Email:', feedbackData.email);
   console.log('Message:', feedbackData.message);
 
